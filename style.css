@@ -1,0 +1,86 @@
+/* Write your CSS below. Try to make it responsive (i.e. no horizontal scroll) */
+
+body {
+    background-color: #f7f7f7;
+    text-align: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0px;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    align-content: center;
+    padding:10px; 
+}
+
+#logo {
+    justify-content: left;
+}
+
+nav {
+    justify-content:flex-end;
+}
+
+nav>a {
+    margin: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+main {
+    background-color: white;
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+button{
+    background-color: #f2849e;
+    padding: 10px 40px;
+    color: white;
+    border: 1px solid #f2849e;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+button>i{
+    color: white;
+}
+button:hover{
+    background-color: #ed4b74;
+    border: 1px solid #ed4b74;
+    
+}
+
+#book-details {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.image {
+    justify-content: left;
+    /* margin-left: auto; */
+}
+
+.details {
+    justify-content: right;
+}
+
+h3 {
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+i {
+    color: gold;
+    text-decoration: underline;
+}
+
+#about-book, #product-details, #author {
+    text-align: left;
+}
