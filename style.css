@@ -10,77 +10,233 @@ body {
 header {
     background-color: white;
     display: flex;
-    align-content: center;
-    padding:10px; 
+    justify-content: space-between;
+    padding: 0.5em 2em;
 }
 
-#logo {
-    justify-content: left;
+figure {
+    text-align: center;
+}
+
+figcaption {
+    color: #f2849e;
+    font-weight: bold;
 }
 
 nav {
-    justify-content:flex-end;
+    align-self: center;
 }
 
 nav>a {
-    margin: 10px;
+    margin: 1em;
     font-weight: bold;
     text-transform: uppercase;
 }
 
+#hemburger {
+    display: none;
+    align-self: center;
+}
+
 main {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    flex-direction: column;
     background-color: white;
     text-align: center;
     width: 80%;
+    padding: 0px 0px 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
+span {
+    font-weight: bold;
+}
 
-button{
+section {
+    color: #f8b732;
+    border-bottom: 2px solid#cccccc;
+    padding: 0px 0px 20px;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+#review {
+    display: inline-block;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+
+.image>img {
+    width: 300px;
+    height: 400px;
+    border-right: 10px solid #cccccc;
+    border-left: 10px solid #cccccc;
+}
+
+#pricing {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#pricing>p {
+    width: 60%;
+}
+
+#dollars {
+    margin-left: 3px;
+}
+
+s {
+    font-size: 1.2em;
+    margin: 0px;
+    padding: 0px;
+}
+
+.price, .profit {
+    padding: 0px;
+    margin: 0px;
+    color: #ca6e5a;
+}
+
+.price {
+    font-size: 1.6em;
+}
+
+.profit {
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+button {
     background-color: #f2849e;
     padding: 10px 40px;
     color: white;
-    border: 1px solid #f2849e;
-    font-size: 1em;
+    border: none;
+    margin-top: 1em;
     font-weight: bold;
     cursor: pointer;
 }
-button>i{
-    color: white;
-}
-button:hover{
+
+button:hover {
     background-color: #ed4b74;
-    border: 1px solid #ed4b74;
-    
+}
+
+#author>p {
+    font-size: 1.5em;
 }
 
 #book-details {
+    width: 80%;
     display: flex;
-    align-content: center;
-    justify-content: center;
-    align-content: center;
-}
-
-.image {
-    justify-content: left;
-    /* margin-left: auto; */
+    flex: 1;
 }
 
 .details {
-    justify-content: right;
+    width: 200px;
+    border-bottom: 2px solid#cccccc;
+    padding: 0px 0px 20px;
+    margin-left: 20px;
+    align-self: flex-start;
 }
 
-h3 {
-    text-transform: uppercase;
-    font-size: 1em;
-}
-
-i {
-    color: gold;
-    text-decoration: underline;
-}
-
-#about-book, #product-details, #author {
+#book-details, #about-book, #product-details, #author {
     text-align: left;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding: 0px 0px 20px;
+    border-bottom: 2px solid#cccccc;
+}
+
+@media (max-width: 600px) {
+    header {
+        background-color: transparent;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+    }
+    header>nav {
+        display: none;
+    }
+    #hemburger {
+        display: block;
+        align-self: center;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        padding: 10px;
+    }
+    figure {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        padding: 10px;
+    }
+    main {
+        width: 100%;
+    }
+    .image>img {
+        width: 200px;
+        border-right: 35px solid #cccccc;
+        border-left: 35px solid #cccccc;
+    }
+    #book-details {
+        justify-content: center;
+        flex-wrap: wrap;
+        flex: 1;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+    body {
+        background-color: white;
+    }
+    header {
+        background-color: transparent;
+        position: sticky;
+        justify-content: space-between;
+        top: 0;
+    }
+    header>nav {
+        display: none;
+    }
+    #hemburger {
+        display: block;
+        align-self: center;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        padding: 10px;
+    }
+    figure {
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        padding: 10px;
+    }
+    main {
+        width: 100%;
+    }
+    #book-details {
+        justify-content: center;
+    }
+    .image>img {
+        width: 200px;
+        border-top: 30px solid #cccccc;
+        border-bottom: 30px solid #cccccc;
+        border-right: none;
+        border-left: none;
+    }
 }
